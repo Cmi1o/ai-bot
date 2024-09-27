@@ -1,6 +1,6 @@
 from aiogram import Router
 
-from src.app.handlers import command, message
+from app.handlers import command, message
 
 
 def gather_routers(*routers) -> Router:

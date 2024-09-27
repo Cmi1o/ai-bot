@@ -1,6 +1,6 @@
 from mistralai import Mistral, OptionalNullable
 
-from src.config import mistralai_token
+from config import mistralai_token
 
 
 async def generate_answer(content: str) -> OptionalNullable[str]:

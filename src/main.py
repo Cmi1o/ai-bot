@@ -5,8 +5,8 @@ from aiogram import Bot, Dispatcher
 from aiogram.enums import ParseMode
 from aiogram.exceptions import TelegramNetworkError
 
-from src.config import bot_token
-from src.app.gather_routers import router
+from config import bot_token
+from app.gather_routers import router
 
 
 async def main() -> None:
