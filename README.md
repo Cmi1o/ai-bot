@@ -39,7 +39,7 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 
 ```bash
 # Clone this project
-$ git clone https://github.com/Cmi1o/ai-bot
+$ git clone https://github.com/Cmi1o/ai-bot.git
 
 # Access
 $ cd ai-bot
