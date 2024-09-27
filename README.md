@@ -37,7 +37,7 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 
 ```bash
 # Clone this project
-$ git clone https://github.com/Cmi1o/teacher-planner-bot
+$ git clone https://github.com/Cmi1o/ai-bot
 
 # Access
 $ cd teacher-planner-bot
