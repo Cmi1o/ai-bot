@@ -54,7 +54,7 @@ $ .venv\Scripts\activate
 # Install dependencies
 $ pip install poetry
 
-$ poetry install
+$ poetry install --no-root
 
 # Run the project
 $ python src/main.py
