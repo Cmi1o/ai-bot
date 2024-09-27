@@ -6,4 +6,6 @@ async def on_startup(bot: Bot) -> None:
 
 
 async def on_shutdown(bot: Bot) -> None:
-    print(f'Bot({await bot.get_my_name()}, id={bot.id}) finished polling')
+    bot_name = await bot.get_my_name()
+    
+    print(f'Bot({bot_name}, id={bot.id}) finished polling')
