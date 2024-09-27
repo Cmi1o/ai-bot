@@ -40,7 +40,7 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 $ git clone https://github.com/Cmi1o/ai-bot
 
 # Access
-$ cd teacher-planner-bot
+$ cd ai-bot
 
 # Create a virtual env
 $ python -m venv .venv
