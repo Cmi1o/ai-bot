@@ -1,3 +1,5 @@
+<div id="_top"/>
+
 <h1 align="center">Ai Bot</h1>
 
 <p align="center">
@@ -54,7 +56,7 @@ $ pip install poetry
 $ poetry install
 
 # Run the project
-$ python main.py
+$ python src/main.py
 
 # The bot will work in Telegram in accordance with the link provided by @BotFather
 ```
