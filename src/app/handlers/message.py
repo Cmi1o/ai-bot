@@ -21,7 +21,7 @@ async def generate_response(message: Message, state: FSMContext) -> None:
     try:
         await message.reply(await generate_answer(message.text))  # type: ignore
     except:
-        await message.answer('Произошла ошибка во время генерации ответа')
+        await message.reply('Произошла ошибка во время генерации ответа')
     
     await state.clear()
 

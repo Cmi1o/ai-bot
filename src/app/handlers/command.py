@@ -15,4 +15,4 @@ async def start(message: Message) -> None:
             'свой запрос'
         )
     
-    await message.answer(enter_message)
+    await message.reply(enter_message)
