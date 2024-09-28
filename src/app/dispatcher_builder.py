@@ -15,9 +15,8 @@ class LogBot:
 
 async def on_startup(bot: Bot) -> None:
     await bot.delete_webhook()
+    print(f'Started polling for {await LogBot(bot).in_log()}')
 
 
 async def on_shutdown(bot: Bot) -> None:
-    bot_name = await bot.get_my_name()
-    
-    print(f'Bot({bot_name}, id={bot.id}) finished polling')
+    print(f'Finished polling for {await LogBot(bot).in_log()}')
