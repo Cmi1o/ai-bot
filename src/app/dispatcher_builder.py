@@ -2,6 +2,12 @@ from aiogram import Bot
 from aiogram.types import BotName
 
 
+__all__ = (
+    'on_startup',
+    'on_shutdown'
+)
+
+
 class LogBot:
     def __init__(self, bot: Bot) -> None:
         self.bot = bot
