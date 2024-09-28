@@ -19,11 +19,11 @@ async def generate_response(message: Message, state: FSMContext) -> None:
     
     await message.answer('Подождите идет генерация ответа...')
     try:
-        await message.answer(await generate_answer(message.text))  # type: ignore
+        await message.reply(await generate_answer(message.text))  # type: ignore
     except:
         await message.answer('Произошла ошибка во время генерации ответа')
-    finally:
-        await state.clear()
+    
+    await state.clear()
 
 
 @router.message(~F.text)
