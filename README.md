@@ -48,8 +48,8 @@ $ cd ai-bot
 # Create a virtual env
 $ python -m venv .venv
 
-# Activate a virtual env (windows variant)
-$ .venv\Scripts\activate
+# Activate a virtual env
+$ source .venv/bin/activate
 
 # Install dependencies
 $ pip install poetry
