@@ -12,7 +12,7 @@ async def generate_answer(content: str) -> OptionalNullable[str]:
             {
                 'role': 'user',
                 'content': content,
-            },
+            }
         ]
     )
     if response and response.choices:
