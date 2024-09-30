@@ -5,7 +5,7 @@ description = ""
 authors = ["Georgiy Vasin <georgijvasin01@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "3.11.5"
+python = "^3.10"
 mistralai = "^1.1.0"
 aiogram = "3.0"
 pydantic-settings = "^2.5.2"
