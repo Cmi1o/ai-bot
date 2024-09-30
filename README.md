@@ -57,7 +57,7 @@ $ pip install poetry
 $ poetry install --no-root
 
 # Run the project
-$ poetry run python .\src\main.py
+$ poetry run python ./src/main.py
 
 # The bot will work in Telegram in accordance with the link provided by @BotFather
 ```
