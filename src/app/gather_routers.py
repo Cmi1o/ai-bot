@@ -3,7 +3,7 @@ from aiogram import Router
 from app.handlers import command, message
 
 
-def gather_routers(*routers) -> Router:
+def gather_routers(*routers: Router) -> Router:
     router = Router()
     router.include_routers(*routers)
     
