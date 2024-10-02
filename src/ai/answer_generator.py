@@ -11,7 +11,7 @@ async def generate_answer(content: str) -> OptionalNullable[str]:
         messages = [
             {
                 'role': 'user',
-                'content': content,
+                'content': content
             }
         ]
     )
