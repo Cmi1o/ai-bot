@@ -2,6 +2,7 @@ import asyncio
 import logging
 
 from aiogram import Bot, Dispatcher
+from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from aiogram.exceptions import TelegramNetworkError
 
@@ -11,7 +12,12 @@ from app.dispatcher_builder import on_shutdown, on_startup
 
 
 async def main() -> None:
-    bot = Bot(bot_token, parse_mode=ParseMode.MARKDOWN)
+    bot = Bot(
+        token=bot_token, 
+        default=DefaultBotProperties(
+            parse_mode=ParseMode.MARKDOWN
+        )
+    )
     dp = Dispatcher()
     
     dp.startup.register(on_startup)
