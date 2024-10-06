@@ -34,7 +34,7 @@ The following tools were used in this project:
 
 ## :white_check_mark: Requirements ##
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [python](https://www.python.org/downloads/release/python-3115/) installed.
+Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Python](https://www.python.org/downloads/release/python-3115/) installed.
 
 ## :checkered_flag: Starting ##
 
