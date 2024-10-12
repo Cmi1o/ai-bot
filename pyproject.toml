@@ -2,7 +2,6 @@
 package-mode = false
 name = "ai-bot"
 version = "0.1.0"
-description = ""
 authors = ["Georgiy Vasin <georgijvasin01@gmail.com>"]
 readme = "README.md"
 license = "MIT"
