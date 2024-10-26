@@ -27,10 +27,10 @@ Telegram bot that include mistralai
 
 The following tools were used in this project:
 
-- [python](https://www.python.org/)
-- [telegram](https://telegram.org/)
-- [mistralai](https://mistral.ai/)
-- [poetry](https://python-poetry.org/)
+- [Python](https://www.python.org/)
+- [Telegram](https://telegram.org/)
+- [Poetry](https://python-poetry.org/)
+- [Mistralai](https://mistral.ai/)
 
 ## :white_check_mark: Requirements ##
 
