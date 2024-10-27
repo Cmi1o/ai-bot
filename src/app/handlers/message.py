@@ -1,9 +1,9 @@
 from aiogram import F, Router
-from aiogram.types import Message
 from aiogram.fsm.context import FSMContext
+from aiogram.types import Message
 
-from ai import generate_answer
 from app.utils.states import RequestStates
+from ai import generate_answer
 
 
 router = Router()

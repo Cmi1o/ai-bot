@@ -6,9 +6,9 @@ from aiogram.client.session.aiohttp import AiohttpSession
 from aiogram.enums import ParseMode
 from aiogram.exceptions import TelegramNetworkError
 
-from config import bot_token
 from app.gather_routers import router
 from app.dispatcher_builder import on_shutdown, on_startup
+from config import bot_token
 
 
 async def main() -> None:
