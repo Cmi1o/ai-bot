@@ -1,3 +1,8 @@
+# TODO files
+TODO.*
+todo.*
+
+# IDE
 .idea/
 .vscode/
 
