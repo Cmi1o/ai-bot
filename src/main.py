@@ -6,9 +6,10 @@ from aiogram.client.default import DefaultBotProperties
 from aiogram.client.session.aiohttp import AiohttpSession
 from aiogram.enums import ParseMode
 from aiogram.exceptions import TelegramNetworkError
+from aiogram.fsm.storage.redis import RedisStorage
 
 from app.gather_routers import router
-from app.dp_settings import on_shutdown, on_startup
+from app.dp_settings import on_shutdown, on_startup, storage
 from config import bot_token
 
 
@@ -20,7 +21,7 @@ async def main() -> None:
             parse_mode=ParseMode.MARKDOWN
         )
     )
-    dp = Dispatcher()
+    dp = Dispatcher(storage=RedisStorage(storage))
     
     dp.startup.register(on_startup)
     dp.shutdown.register(on_shutdown)

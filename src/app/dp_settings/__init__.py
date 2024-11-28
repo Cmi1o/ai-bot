@@ -1,1 +1,2 @@
 from .lifetime import *
+from .redis_storage import storage
