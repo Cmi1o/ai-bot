@@ -8,7 +8,7 @@ from aiogram.enums import ParseMode
 from aiogram.exceptions import TelegramNetworkError
 
 from app.gather_routers import router
-from app.dispatcher_builder import on_shutdown, on_startup
+from app.dp_settings import on_shutdown, on_startup
 from config import bot_token
 
 
