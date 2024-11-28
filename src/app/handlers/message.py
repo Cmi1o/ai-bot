@@ -15,12 +15,16 @@ async def in_process(message: Message) -> None:
 
 @router.message(F.text)
 async def generate_response(message: Message, state: FSMContext) -> None:
+    if not message.text: return
+    
     await state.set_state(RequestStates.in_process)
     
     await message.answer('Подождите идет генерация ответа...')
-    try:
-        await message.reply(await generate_answer(message.text))  # type: ignore
-    except:
+    ai_response = await generate_answer(message.text)
+    
+    if ai_response:
+        await message.reply(ai_response)
+    else:
         await message.reply('Произошла ошибка во время генерации ответа')
     
     await state.clear()
