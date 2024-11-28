@@ -1,4 +1,5 @@
 import asyncio
+import logging
 
 from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
@@ -34,4 +35,4 @@ if __name__ == '__main__':
         asyncio.run(main())
     except (KeyboardInterrupt, TelegramNetworkError) as error:
         if isinstance(error, TelegramNetworkError):
-            print('Network error')
+            logging.error('Network error')
