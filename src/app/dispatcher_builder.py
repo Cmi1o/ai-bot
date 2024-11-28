@@ -33,4 +33,5 @@ async def on_startup(bot: Bot) -> None:
 async def on_shutdown(bot: Bot) -> None:
     bot_in_log = await LogBot(bot).in_log()
     
+    await bot.session.close()
     logger.info(f'Finished polling for {bot_in_log}')
