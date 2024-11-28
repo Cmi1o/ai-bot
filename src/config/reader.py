@@ -6,6 +6,7 @@ from .loader import settings
 __all__ = (
     'bot_token',
     'mistralai_token',
+    'redis_url'
 )
 
 
