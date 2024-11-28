@@ -9,8 +9,8 @@ __all__ = (
     'on_shutdown'
 )
 
-
 logger = logging.Logger(__name__, level=logging.INFO)
+
 
 class LogBot:
     def __init__(self, bot: Bot) -> None:
@@ -24,10 +24,13 @@ class LogBot:
 
 
 async def on_startup(bot: Bot) -> None:
-    await bot.delete_webhook()
+    bot_in_log = await LogBot(bot).in_log()
     
-    logger.info(f'Started polling for {await LogBot(bot).in_log()}')
+    await bot.delete_webhook()
+    logger.info(f'Started polling for {bot_in_log}')
 
 
 async def on_shutdown(bot: Bot) -> None:
-    logger.info(f'Finished polling for {await LogBot(bot).in_log()}')
+    bot_in_log = await LogBot(bot).in_log()
+    
+    logger.info(f'Finished polling for {bot_in_log}')
