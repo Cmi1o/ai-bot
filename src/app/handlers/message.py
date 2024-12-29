@@ -2,11 +2,11 @@ from aiogram import F, Router
 from aiogram.fsm.context import FSMContext
 from aiogram.types import Message
 
-from app.utils.states import RequestStates
 from ai import generate_answer
-
+from app.utils.states import RequestStates
 
 router = Router()
+
 
 @router.message(RequestStates.in_process)
 async def in_process(message: Message) -> None:
@@ -15,21 +15,24 @@ async def in_process(message: Message) -> None:
 
 @router.message(F.text)
 async def generate_response(message: Message, state: FSMContext) -> None:
-    if not message.text: return
-    
+    if not message.text:
+        return
+
     await state.set_state(RequestStates.in_process)
-    
+
     await message.answer('Подождите идет генерация ответа...')
     ai_response = await generate_answer(message.text)
-    
+
     if ai_response:
         await message.reply(ai_response)
     else:
         await message.reply('Произошла ошибка во время генерации ответа')
-    
+
     await state.clear()
 
 
 @router.message(~F.text)
 async def unknown_format(message: Message) -> None:
-    await message.answer('Отправлен неизвестный формат, бот обрабатывает только текст')
+    await message.answer(
+        'Отправлен неизвестный формат, бот обрабатывает только текст'
+    )

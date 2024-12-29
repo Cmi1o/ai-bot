@@ -2,12 +2,7 @@ from typing import Final as const
 
 from .loader import settings
 
-
-__all__ = (
-    'bot_token',
-    'mistralai_token',
-    'redis_url'
-)
+__all__ = ('bot_token', 'mistralai_token', 'redis_url')
 
 
 bot_token: const = settings.bot_token.get_secret_value()
