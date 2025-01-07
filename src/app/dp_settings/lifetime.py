@@ -6,7 +6,7 @@ from .logging_bot import LogBot
 
 __all__ = ('on_startup', 'on_shutdown')
 
-logger = logging.Logger(__name__, level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 async def on_startup(bot: Bot) -> None:
