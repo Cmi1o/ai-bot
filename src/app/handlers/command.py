@@ -7,12 +7,12 @@ router = Router()
 
 @router.message(CommandStart(ignore_case=True))
 async def start(message: Message) -> None:
-    enter_message = 'ERROR'
+    if not message.from_user:
+        return
 
-    if message.from_user:
-        enter_message = (
-            f'Привет, {message.from_user.full_name}, я ИИ на подобие ChatGPT. Пришли '
-            'свой запрос'
-        )
+    enter_message = (
+        f'Привет, {message.from_user.full_name}, я ИИ на подобие ChatGPT. Пришли '
+        'свой запрос'
+    )
 
     await message.reply(enter_message)
